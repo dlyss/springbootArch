@@ -6,7 +6,7 @@
 	<groupId>com.baike</groupId>
 	<artifactId>baike-arch</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>springbootArch</name>
 	<description>Demo project for Spring Boot</description>
@@ -47,15 +47,89 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+<!--build-->
 	<build>
+		<filters>
+			<filter>src/main/resources/application.yml</filter>
+			<filter>src/main/resources/config/application-${pom.env}.yml</filter>
+		</filters>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*</include>
+				</includes>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/main/resources/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<useDefaultDelimiters>true</useDefaultDelimiters>
+				</configuration>
+			</plugin>
 		</plugins>
+
 	</build>
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<pom.env>dev</pom.env>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+				<property>
+					<name>APP_ENV</name>
+					<value>dev</value>
+				</property>
+			</activation>
+		</profile>
 
+		<profile>
+			<id>idc_test</id>
+			<properties>
+				<pom.env>idc_test</pom.env>
+			</properties>
+			<activation>
+				<property>
+					<name>APP_ENV</name>
+					<value>idc_test</value>
+				</property>
+			</activation>
+		</profile>
+	</profiles>
 
+	<repositories>
+		<repository>
+			<id>Hudong-Local</id>
+			<url>http://mvn2.hudong.net:8080/artifactory/Hudong-Local</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>Third-Party</id>
+			<url>http://mvn2.hudong.net:8080/artifactory/Third-Party</url>
+		</repository>
+		<repository>
+			<id>remote-repos</id>
+			<url>http://mvn2.hudong.net:8080/artifactory/remote-repos</url>
+		</repository>
+	</repositories>
 </project>

@@ -96,7 +96,7 @@
     <!-- ===== [框架Appender] ===== -->
     <!-- [框架Appender] USFP 基础设施 - 默认 -->
     <appender name="USFP-DEFAULT-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <param name="file" value="${loggingRoot}/baikeknown-default.log"/>
+        <param name="file" value="${loggingRoot}/common-default.log"/>
         <param name="append" value="true"/>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>baike-default.%d{yyyy-MM-dd}.log</fileNamePattern>
@@ -108,24 +108,9 @@
         </encoder>
     </appender>
 
-    <!-- ===== [应用Appender] ===== -->
-    <!-- [应用Appender] 默认 -->
-    <appender name="baikeknown-DEFAULT-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <param name="file" value="${loggingRoot}/baike-defined/baikeknown-default.log"/>
-        <param name="append" value="true"/>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>baike-defined/baikeknown-default.%d{yyyy-MM-dd}.log</fileNamePattern>
-            <maxHistory>30</maxHistory>
-        </rollingPolicy>
-        <encoder>
-            <pattern>%d %-5p %c{2} - %m%n</pattern>
-            <charset>GBK</charset>
-        </encoder>
-    </appender>
-
     <!-- [应用Appender] 应用业务处理结果日志 -->
     <appender name="baikeknown-BUSINESS-RESULT-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <param name="file" value="${loggingRoot}/user-defined/baikeknown-biz-result.log"/>
+        <param name="file" value="${loggingRoot}/user-defined/userdefine-biz-result.log"/>
         <param name="append" value="true"/>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>user-defined/baikeknown-biz-result.%d{yyyy-MM-dd}.log</fileNamePattern>
