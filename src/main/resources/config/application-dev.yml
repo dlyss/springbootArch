@@ -1,0 +1,23 @@
+spring:
+  ## MySQL
+  datasource:
+    url: jdbc:mysql://172.16.1.201:3306/apps?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: wiki_write
+    password: wiki_write
+    driver-class-name: com.mysql.jdbc.Driver
+
+ ## Redis配置
+  redis:
+    host: 172.16.1.94
+    port: 6387
+    timeout: 10000
+    pool:
+          max-idle: 10
+          min-idle: 1
+          max-active: 10
+          max-wait: -1
+
+log:
+  config: classpath:logback-spring.xml
+  loggingRoot: /Users/dongliangyu/WorkSpace/logs
+  loggingLevel: debug

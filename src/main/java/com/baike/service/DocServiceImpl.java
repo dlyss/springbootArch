@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by dongliangyu on 2018/8/15.
@@ -14,7 +15,7 @@ import java.util.List;
 public class DocServiceImpl {
     @Autowired
     private DocMapper docMapper;
-    public  List<DocEntity> findByTitle(String docTitle){
+    public DocEntity findByTitle(String docTitle){
         return docMapper.findByTitle(docTitle);
     }
 }
