@@ -13,6 +13,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 public class MyBatisConfig {
+    //默认tomcat数据源
     @Autowired
     private DataSource dataSource;
     @Bean(name = "sqlSessionFactory")

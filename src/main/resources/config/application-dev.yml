@@ -6,6 +6,8 @@ spring:
     password: wiki_write
     driver-class-name: com.mysql.jdbc.Driver
 
+
+
  ## Redis配置
   redis:
     host: 172.16.1.94

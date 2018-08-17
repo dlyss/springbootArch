@@ -1,49 +1,12 @@
 spring:
    ## MySQL
   datasource:
-    url: jdbc:mysql://bkwk-mw1.mysql.local:3307/apps?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
-    username: apps_oper
-    password: apps_oper
-    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.11.212:3306/hddoc?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: hddoc
+    password: Hd_Mysql5718
     driver-class-name: com.mysql.jdbc.Driver
 
-   # Redis配置
-  redis:
-    host: 5.redis.local
-    port: 6387
-    timeout: 10000
-    pool:
-          max-idle: 10
-          min-idle: 1
-          max-active: 10
-          max-wait: -1
-
 log:
-  config: classpath:logback-spring.xml
-  loggingRoot: /home/baikeknown/logs/product
+ config: classpath:logback-spring.xml
+  loggingRoot: /Users/dongliangyu/WorkSpace/logs
   loggingLevel: debug
-  remote_logServer_ip: 192.168.11.35
-doc:
-   service:
-          url: rmi://1.inca.local:1899
-user:
-   server:
-         url: rmi://192.168.11.16:1999
-postmsg:
-   server:
-         url: rmi://192.168.11.42:4060
-usercredittransfer:
-               service:
-                       url: rmi://192.168.11.42:4060
-memcached:
-   url: cache-1-1.wlwx.hudong.com:12010,cache-1-2.wlwx.hudong.com:12010,cache-1-3.wlwx.hudong.com:12010,cache-1-4.wlwx.hudong.com:12010
-   weight: 10
-session:
-   timeout: 1800000
-   memcached:
-          weight: 10
-          server:
-                list: 7.memcache.local:11212
-wx:
-  appId: wx1930b5816b775586
-  secret: 85db9666b57b66664b252e3aa99f0184

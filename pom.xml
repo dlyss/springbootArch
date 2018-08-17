@@ -46,11 +46,16 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!--如果部署外部自己的Tomcat,这一项配置必不可少，否则去之-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 <!--build-->
 	<build>
 		<filters>
-			<filter>src/main/resources/application.yml</filter>
 			<filter>src/main/resources/config/application-${pom.env}.yml</filter>
 		</filters>
 		<resources>
