@@ -8,8 +8,8 @@ spring:
 
  ## Redis配置
 redis:
-    host: 192.168.11.204
-    port: 6383
+    host: 192.168.1****
+    port: ****
     timeout: 10000
     pool:
           max-idle: 10

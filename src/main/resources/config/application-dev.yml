@@ -2,8 +2,8 @@ spring:
   ## MySQL
   datasource:
     url: jdbc:mysql://172.16.1.201:3306/docresource?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
-    username: wiki_write
-    password: wiki_write
+    username: ****
+    password: ****
     driver-class-name: com.mysql.jdbc.Driver
 
 
@@ -11,7 +11,7 @@ spring:
  ## Redis配置
   redis:
     host: 172.16.1.94
-    port: 6387
+    port: ****
     timeout: 10000
     pool:
           max-idle: 10
