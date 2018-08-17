@@ -1,9 +1,9 @@
 spring:
    ## MySQL
   datasource:
-    url: jdbc:mysql://192.168.11.212:3306/hddoc?useUnicode=true&amp;characterEncoding=UTF-8
-    username: drhd
-    password: Hd_Mysql5718
+    url: jdbc:mysql://192.168.****:3306/hddoc?useUnicode=true&amp;characterEncoding=UTF-8
+    username: ****
+    password: *****
     driver-class-name: com.mysql.jdbc.Driver
 
  ## Redis配置
