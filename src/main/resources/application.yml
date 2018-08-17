@@ -21,7 +21,6 @@
 server:
   tomcat:
     uri-encoding: UTF-8
-  address: lore.baike.com
 
 
 oko :  properties ok !

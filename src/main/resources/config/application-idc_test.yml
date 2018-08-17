@@ -1,12 +1,24 @@
 spring:
    ## MySQL
   datasource:
-    url: jdbc:mysql://192.168.11.212:3306/hddoc?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
-    username: hddoc
+    url: jdbc:mysql://192.168.11.212:3306/hddoc?useUnicode=true&amp;characterEncoding=UTF-8
+    username: drhd
     password: Hd_Mysql5718
     driver-class-name: com.mysql.jdbc.Driver
 
+ ## Redis配置
+redis:
+    host: 192.168.11.204
+    port: 6383
+    timeout: 10000
+    pool:
+          max-idle: 10
+          min-idle: 1
+          max-active: 10
+          max-wait: -1
+
+
 log:
- config: classpath:logback-spring.xml
+  config: classpath:logback-spring.xml
   loggingRoot: /Users/dongliangyu/WorkSpace/logs
   loggingLevel: debug
