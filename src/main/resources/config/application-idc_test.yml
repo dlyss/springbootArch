@@ -1,7 +1,7 @@
 spring:
    ## MySQL
   datasource:
-    url: jdbc:mysql://192.168.****:3306/hddoc?useUnicode=true&amp;characterEncoding=UTF-8
+    url: jdbc:mysql://192.168.****:3306/****?useUnicode=true&amp;characterEncoding=UTF-8
     username: ****
     password: *****
     driver-class-name: com.mysql.jdbc.Driver
