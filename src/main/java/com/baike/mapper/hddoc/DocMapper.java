@@ -1,9 +1,7 @@
-package com.baike.mapper;
+package com.baike.mapper.hddoc;
 
 import com.baike.entity.DocEntity;
 
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by dongliangyu on 2018/8/15.

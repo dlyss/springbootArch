@@ -78,7 +78,7 @@ public class Application extends SpringBootServletInitializer {
 1.profiles定义了各个环境的变量id   
 2.filters中定义了变量配置文件的地址，其中地址中的环境变量就是上面profile中定义的值。maven filter可利用指定的xxx.properties中对应的key=value对资源文件中的${key}进行替换，最终把你的资源文件中的username=${key}替换成username=value。filter是在maven的compile阶段执行过虑替换的。    
 3.resources中是定义哪些目录下的文件会被配置文件中定义的变量替换，一般我们会把项目的配置文件放在src/main/resources下，像db,bean等，里面用到的变量在打包时就会根据filter中的变量配置替换成固定值  
-####多数据源  
+####druid数据源  
 ####redis相关   
 ####logback   
 1、在resources目录下新建logback-spring.xml  

@@ -23,3 +23,6 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+src/main/resources/config/application-dev.yml
+src/main/resources/config/application-idc_test.yml
+src/main/resources/config/application-idc_test.yml

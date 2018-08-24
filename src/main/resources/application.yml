@@ -10,6 +10,12 @@
         classic_compatible: true
         #template_update_delay: 0
       #cache: false  #热部署时，关闭freemarker页面缓存
+  mvc:
+      view:
+        # 页面默认前缀目录
+        prefix: /WEB-INF/jsp/
+            # 响应页面默认后缀
+        suffix: .jsp
   http:
       encoding.charset: UTF-8
       encoding.enable: true

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.baike.mapper.hdcms.ChannelMapper">
+    <resultMap id="channelMap" type="com.baike.entity.ChannelEntity">
+        <result property="channelId" column="CHANNEL_ID"/>
+        <result property="channelName" column="CHANNEL_NAME"/>
+    </resultMap>
+    <select id="findChannelByName" parameterType="String" resultMap="channelMap">
+        SELECT * FROM t_wiki_cms_channel where channel_name=#{channelName} limit 1;
+    </select>
+</mapper>

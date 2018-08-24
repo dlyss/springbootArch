@@ -1,11 +1,12 @@
 package com.baike.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by dongliangyu on 2018/8/15.
  */
-public class DocEntity {
+public class DocEntity implements Serializable{
     public String docTitle;
     public int docState;
     public Date docCreatedTime;
